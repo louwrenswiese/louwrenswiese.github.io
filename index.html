@@ -60,6 +60,28 @@
 
   ul { padding-left: 1.2rem; }
   ul li a { font-weight: bold; }
+
+/* Tag styling */
+.tags {
+  margin: 0.4rem 0 0.8rem 0;
+}
+
+.tags span {
+  display: inline-block;
+  background: #e6e6e6;
+  padding: 0.3rem 0.6rem;
+  margin-right: 0.4rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: default;
+}
+
+/* Dark mode tags */
+.dark-mode .tags span {
+  background: #333;
+}
+
+  
 /* Dark Mode */
 .dark-mode {
   background: #121212;
@@ -132,6 +154,13 @@
 <div class="post" id="day1">
   <h2>Day 1 — Why this site?</h2>
   <p><em>November 24, 2025</em></p>
+
+  <div class="tags">
+  <span>🤖 AI</span>
+  <span>💻 Code</span>
+  <span>🚀 SaaS</span>
+</div>
+  
   <p>Starting something small today.<br>
   Not a course, not a product, just a record of learning.</p>
 
