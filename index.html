@@ -144,6 +144,23 @@
 <!-- Projects Section -->
 <h2 id="projects">Projects</h2>
 <p>Coming soon: small SaaS experiments and AI tools I’m building.</p>
+<script>
+  const toggle = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  // Load saved mode
+  if (localStorage.getItem('mode') === 'dark') {
+    body.classList.add('dark-mode');
+    toggle.textContent = '☀️';
+  }
+
+  toggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    const isDark = body.classList.contains('dark-mode');
+    toggle.textContent = isDark ? '☀️' : '🌙';
+    localStorage.setItem('mode', isDark ? 'dark' : 'light');
+  });
+</script>
 
 </body>
 </html>
