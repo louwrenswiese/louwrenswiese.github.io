@@ -5,42 +5,70 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Learning how machines think, and how to make them useful.</title>
 <style>
-  body { font-family: sans-serif; max-width: 700px; margin: 2rem auto; line-height: 1.6; padding: 0 1rem; color: #222; background: #f9f9f9; }
+  body { font-family: sans-serif; max-width: 700px; margin: 0 auto; line-height: 1.6; padding: 0 1rem; color: #222; background: #f9f9f9; }
+  
+  /* Sticky Menu */
+  .menu {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 2rem;
+    z-index: 100;
+  }
+  .menu a { color: #1a0dab; text-decoration: none; margin-right: 1rem; font-weight: bold; }
+  .menu a:hover { text-decoration: underline; }
+
   h1 { font-size: 2rem; margin-bottom: 0.5rem; }
   h2 { font-size: 1.3rem; margin-top: 2rem; }
-  a { color: #1a0dab; text-decoration: none; margin-right: 1rem; }
-  a:hover { text-decoration: underline; }
-  .menu { margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid #ccc; }
-  .profile { display: flex; align-items: center; margin-bottom: 2rem; padding: 1rem; background: #fff; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);}
-  .profile img { width: 80px; height: 80px; border-radius: 50%; margin-right: 1rem; }
-  .post { margin-bottom: 2rem; padding: 1rem; background: #fff; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);}
+
+  /* Profile Section */
   .profile {
-  display: flex;
-  align-items: center;
-  margin-bottom: 2rem;
-  padding: 1rem;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  .profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1.2rem;
+    border: 2px solid #ccc;
+  }
+  .profile-text { line-height: 1.4; }
 
-.profile img {
-  width: 100px;       /* slightly bigger */
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;   /* keep proportions without stretching */
-  margin-right: 1.2rem;
-  border: 2px solid #ccc;
-}
+  /* Posts Styling */
+  .post {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: #fff;
+    border-left: 5px solid #1a73e8;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .post:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .post h2 { margin-top: 0; color: #1a0dab; }
 
-.profile-text {
-  line-height: 1.4;
-}
+  a { color: #1a0dab; }
+  a:hover { text-decoration: underline; }
+
+  ul { padding-left: 1.2rem; }
+
 </style>
 </head>
 <body>
 
-<!-- Menu -->
+<!-- Sticky Menu -->
 <div class="menu">
   <a href="#home">Home</a>
   <a href="#posts">Posts</a>
@@ -53,8 +81,7 @@
   <img src="https://raw.githubusercontent.com/louwrenswiese/louwrenswiese.github.io/main/profile.png" alt="Profile Picture">
   <div class="profile-text">
     <strong>Louwrens Wiese</strong><br>
-    Learning AI, coding, and building small SaaS tools.  
-    Documenting experiments, mistakes, and progress in public.
+    Learning AI, coding, and building small SaaS tools. Documenting experiments, mistakes, and progress in public.
   </div>
 </div>
 
@@ -65,19 +92,19 @@
 <h2 id="posts">Welcome</h2>
 <p>This is where I keep track of what I’m learning about:</p>
 <ul>
-<li>Applied machine learning</li>
-<li>Practical AI tools and models</li>
-<li>Building small, useful SaaS products</li>
-<li>Solving problems with code rather than hype</li>
+  <li>Applied machine learning</li>
+  <li>Practical AI tools and models</li>
+  <li>Building small, useful SaaS products</li>
+  <li>Solving problems with code rather than hype</li>
 </ul>
 
 <div class="post">
-<h2>Day 1 — Why this site?</h2>
-<p>Starting something small today.<br>
-Not a course, not a product, just a record of learning.</p>
-<p>I want to understand applied AI, not just read about it.<br>
-Tools, experiments, mistakes, SaaS ideas, and the odd rant.</p>
-<p>Notes here are public on purpose — mistakes and all.</p>
+  <h2>Day 1 — Why this site?</h2>
+  <p>Starting something small today.<br>
+  Not a course, not a product, just a record of learning.</p>
+  <p>I want to understand applied AI, not just read about it.<br>
+  Tools, experiments, mistakes, SaaS ideas, and the odd rant.</p>
+  <p>Notes here are public on purpose — mistakes and all.</p>
 </div>
 
 <!-- Projects Section Placeholder -->
@@ -86,4 +113,3 @@ Tools, experiments, mistakes, SaaS ideas, and the odd rant.</p>
 
 </body>
 </html>
-
