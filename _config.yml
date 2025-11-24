@@ -1,0 +1,10 @@
+remote_theme: "mmistakes/minimal-mistakes"
+title: "AI, SaaS & Exploration"
+description: "A developer’s lab book on applied AI, small SaaS experiments and useful code."
+plugins:
+  - jekyll-remote-theme
+
+author:
+  name: "Louwrens Wiese"
+  avatar: "/assets/images/avatar.jpg"
+  bio: "Learning AI and building small things that solve real problems."
