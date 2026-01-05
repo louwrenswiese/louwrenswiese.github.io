@@ -1,212 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Learning how machines think, and how to make them useful.</title>
-<style>
-  body { font-family: sans-serif; max-width: 700px; margin: 0 auto; line-height: 1.6; padding: 0 1rem; color: #222; background: #f9f9f9; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Quiet Rebellion – Working Collection</title>
+  <meta name="description" content="A quiet working page for collecting images, quotes, and sounds for a calm, minimal video project." />
+  <style>
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background-color: #fafafa;
+      color: #222;
+      line-height: 1.6;
+      margin: 0;
+      padding: 2rem;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-  /* Sticky Menu */
-  .menu {
-    position: sticky;
-    top: 0;
-    background: #fff;
-    padding: 1rem 0;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 2rem;
-    z-index: 100;
-  }
-  .menu a { color: #1a0dab; text-decoration: none; margin-right: 1rem; font-weight: bold; }
-  .menu a:hover { text-decoration: underline; }
+    h1, h2, h3 {
+      font-weight: normal;
+      margin-top: 2.5rem;
+    }
 
-  /* Profile Section */
-  .profile {
-    display: flex;
-    align-items: center;
-    margin-bottom: 2rem;
-    padding: 1rem;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  }
-  .profile img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 1.2rem;
-    border: 2px solid #ccc;
-  }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
 
-  /* Posts Styling */
-  .post {
-    margin-bottom: 2rem;
-    padding: 1rem;
-    background: #fff;
-    border-left: 5px solid #1a73e8;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  .post:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
-  .post h2 { margin-top: 0; color: #1a0dab; }
+    h2 {
+      font-size: 1.4rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.25rem;
+    }
 
-  a { color: #1a0dab; }
-  a:hover { text-decoration: underline; }
+    p {
+      margin: 0.75rem 0;
+    }
 
-  ul { padding-left: 1.2rem; }
-  ul li a { font-weight: bold; }
+    .note {
+      font-size: 0.9rem;
+      color: #555;
+      font-style: italic;
+    }
 
-/* Tag styling */
-.tags {
-  margin: 0.4rem 0 0.8rem 0;
-}
+    .item {
+      margin: 1.5rem 0;
+      padding-left: 1rem;
+      border-left: 2px solid #e0e0e0;
+    }
 
-.tags span {
-  display: inline-block;
-  background: #e6e6e6;
-  padding: 0.3rem 0.6rem;
-  margin-right: 0.4rem;
-  border-radius: 6px;
-  font-size: 0.85rem;
-  cursor: default;
-}
+    .attribution {
+      font-size: 0.85rem;
+      color: #666;
+    }
 
-/* Dark mode tags */
-.dark-mode .tags span {
-  background: #333;
-}
+    .quote {
+      font-size: 1.1rem;
+      margin: 1rem 0;
+    }
 
-/* Last updated timestamp */
-.updated {
-  font-size: 0.75rem;
-  color: #777;
-  margin-top: 1rem;
-  text-align: right;
-}
+    .author {
+      font-size: 0.9rem;
+      color: #555;
+      text-align: right;
+    }
 
-/* Dark mode */
-.dark-mode .updated {
-  color: #aaa;
-}
+    ul {
+      padding-left: 1.2rem;
+    }
 
-  
-/* Dark Mode */
-.dark-mode {
-  background: #121212;
-  color: #e6e6e6;
-}
+    a {
+      color: #444;
+      text-decoration: underline;
+    }
 
-.dark-mode .menu {
-  background: #1e1e1e;
-  border-bottom: 1px solid #444;
-}
-
-.dark-mode .menu a { color: #9bb9ff; }
-
-.dark-mode .profile,
-.dark-mode .post {
-  background: #1e1e1e;
-  box-shadow: 0 2px 6px rgba(255,255,255,0.05);
-  border-left-color: #4a8eff;
-}
-
-.dark-mode .profile img {
-  border-color: #555;
-}
-
-.dark-mode a { color: #9bb9ff; }
-.dark-mode a:hover { text-decoration: underline; }
-
-#theme-toggle {
-  float: right;
-  font-size: 1.1rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  margin-right: 0.6rem;
-}
-
-</style>
+    footer {
+      margin-top: 4rem;
+      font-size: 0.8rem;
+      color: #777;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
 
-<!-- Sticky Menu -->
-<div class="menu">
-  <a href="#home">Home</a>
-  <a href="#posts">Posts</a>
-  <a href="#projects">Projects</a>
-  <a href="#about">About</a>
-  <button id="theme-toggle">🌙</button>
-</div>
+  <h1>A Quiet Rebellion</h1>
+  <p class="note">Working collection page — images, words, and sounds gathered slowly.</p>
 
-<!-- Profile Section -->
-<div class="profile" id="about">
-  <img src="https://raw.githubusercontent.com/louwrenswiese/louwrenswiese.github.io/main/profile.png" alt="Profile Picture">
-  <div class="profile-text">
-    <strong>Louwrens Wiese</strong><br>
-    Learning AI, coding, and building small SaaS tools. Documenting experiments, mistakes, and progress in public.
+  <h2>Images</h2>
+  <p class="note">Still images for calm sequences. No spectacle. No urgency.</p>
+
+  <div class="item">
+    <p><strong>Description:</strong> Forest path in early morning light</p>
+    <p><strong>Source:</strong> Wikimedia Commons</p>
+    <p class="attribution">Author: Unknown · Public Domain<br />
+      <a href="https://commons.wikimedia.org/" target="_blank">Source link</a>
+    </p>
   </div>
-</div>
 
-<!-- Homepage Title -->
-<h1 id="home">Learning how machines think, and how to make them useful.</h1>
-<p>Notes on applied AI, small SaaS experiments, and the tools I’m learning along the way.</p>
+  <div class="item">
+    <p><strong>Description:</strong> Digital remix of public-domain landscape painting</p>
+    <p><strong>Source:</strong> Rawpixel</p>
+    <p class="attribution">License: Public Domain / CC0<br />
+      <a href="https://www.rawpixel.com/" target="_blank">Source link</a>
+    </p>
+  </div>
 
-<!-- Latest Posts Section -->
-<h2>Latest Posts</h2>
-<ul>
-  <li><a href="#day1">Day 1 — Why this site? (Nov 24, 2025)</a></li>
-</ul>
+  <h2>Quotes</h2>
+  <p class="note">Short lines only. One thought at a time.</p>
 
-<!-- First Post -->
-<div class="post" id="day1">
-  <h2>Day 1 — Why this site?</h2>
-  <p><em>November 24, 2025</em></p>
+  <div class="item">
+    <p class="quote">“Beware the barrenness of a busy life.”</p>
+    <p class="author">— Socrates</p>
+  </div>
 
-  <div class="tags">
-  <span>🤖 AI</span>
-  <span>💻 Code</span>
-  <span>🚀 SaaS</span>
-</div>
-  
-  <p>Starting something small today.<br>
-  Not a course, not a product, just a record of learning.</p>
+  <div class="item">
+    <p class="quote">“The things you think about determine the quality of your mind.”</p>
+    <p class="author">— Marcus Aurelius</p>
+  </div>
 
-  <p>I want to understand applied AI, not just read about it.<br>
-  Tools, experiments, mistakes, SaaS ideas, and the odd rant.</p>
+  <h2>Music & Sound</h2>
+  <p class="note">Subtle, slow, almost unnoticed.</p>
 
-  <p>Notes here are public on purpose — mistakes and all.</p>
+  <div class="item">
+    <p><strong>Description:</strong> Soft ambient piano loop</p>
+    <p><strong>Source:</strong> YouTube Audio Library</p>
+    <p class="attribution">License: Free to use<br />
+      <a href="https://www.youtube.com/audiolibrary" target="_blank">Source link</a>
+    </p>
+  </div>
 
-  <p class="updated">Last updated: November 24, 2025</p>
+  <div class="item">
+    <p><strong>Description:</strong> Field recording — wind through trees</p>
+    <p><strong>Source:</strong> Freesound</p>
+    <p class="attribution">License: CC0 / Attribution<br />
+      <a href="https://freesound.org/" target="_blank">Source link</a>
+    </p>
+  </div>
 
-</div>
+  <h2>Notes</h2>
+  <ul>
+    <li>No voice-over for the first video.</li>
+    <li>One sentence per image.</li>
+    <li>Long pauses are intentional.</li>
+    <li>This page is a working notebook, not a finished statement.</li>
+  </ul>
 
-<!-- Projects Section -->
-<h2 id="projects">Projects</h2>
-<p>Coming soon: small SaaS experiments and AI tools I’m building.</p>
-<script>
-  const toggle = document.getElementById('theme-toggle');
-  const body = document.body;
-
-  // Load saved mode
-  if (localStorage.getItem('mode') === 'dark') {
-    body.classList.add('dark-mode');
-    toggle.textContent = '☀️';
-  }
-
-  toggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    const isDark = body.classList.contains('dark-mode');
-    toggle.textContent = isDark ? '☀️' : '🌙';
-    localStorage.setItem('mode', isDark ? 'dark' : 'light');
-  });
-</script>
+  <footer>
+    <p>Collected quietly by Louwrens Wiese · GitHub Pages</p>
+  </footer>
 
 </body>
 </html>
-
