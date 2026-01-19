@@ -23,3 +23,23 @@ This directory contains the only active writing on the site.
 - Multi-part work
 
 If a text does not meet these criteria, it does not belong in /now.
+
+Template.html usage rules (important, keep them simple)
+
+Duplicate the file
+
+Rename it using date + description
+
+2026-01-response-to-x.html
+
+
+Fill in the blanks
+
+Write in one sitting
+
+Edit once
+
+Publish or delete
+
+No refactoring. No styling tweaks per entry.
+Consistency beats elegance.
