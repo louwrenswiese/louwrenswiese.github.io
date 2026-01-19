@@ -24,7 +24,7 @@ This directory contains the only active writing on the site.
 
 If a text does not meet these criteria, it does not belong in /now.
 
-Template.html usage rules (important, keep them simple)
+Template.html usage rules (important, keep them simple):
 
 Duplicate the file
 
