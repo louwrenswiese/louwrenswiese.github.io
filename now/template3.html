@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>/now/ Entry - [YYYY-MM-DD]</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            max-width: 700px;
+            margin: 2rem auto;
+            line-height: 1.6;
+            padding: 0 1rem;
+        }
+        h1 {
+            font-size: 1.8rem;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 0.3rem;
+        }
+        .date {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        #content {
+            min-height: 300px;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            white-space: pre-wrap;
+        }
+        .word-count {
+            font-size: 0.9rem;
+            color: #999;
+            margin-bottom: 1rem;
+        }
+        button {
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>/now/</h1>
+    <div class="date">[YYYY-MM-DD]</div>
+
+    <div id="content" contenteditable="true" placeholder="Start typing your /now/ entry here..."></div>
+
+    <div class="word-count">Word count: <span id="count">0</span></div>
+
+    <button id="copyBtn">Copy as Markdown</button>
+
+    <script>
+        const content = document.getElementById('content');
+        const countDisplay = document.getElementById('count');
+        const copyBtn = document.getElementById('copyBtn');
+
+        // Update word count
+        content.addEventListener('input', () => {
+            const text = content.innerText.trim();
+            const words = text.length ? text.split(/\s+/).length : 0;
+            countDisplay.innerText = words;
+        });
+
+        // Copy as Markdown
+        copyBtn.addEventListener('click', () => {
+            const date = document.querySelector('.date').innerText;
+            const title = document.querySelector('h1').innerText;
+            const text = content.innerText.trim();
+
+            const md = `# ${title}\n\n${date}\n\n${text}`;
+            navigator.clipboard.writeText(md).then(() => {
+                alert('Copied to clipboard as Markdown!');
+            }, () => {
+                alert('Failed to copy. Try manually.');
+            });
+        });
+    </script>
+</body>
+</html>
+
